@@ -7,6 +7,7 @@ import ProductList from "./components/ProductList/ProductList";
 import Form from "./components/Form/Form";
 import './variables.css';
 import SalonProfile from './components/SalonProfile/SalonProfile';
+import MasterProfile from './components/MasterProfile/MasterProfile';
 
 function App() {
     const {onToggleButton, tg} = useTelegram();
@@ -25,7 +26,7 @@ function App() {
             <Header />
             <span>Вы выбрали {master}</span>
             <Routes>
-                
+                <Route path={'/master'} element={<MasterProfile/>}/>
                 <Route index element={<SalonProfile><ProductList /></SalonProfile>}/>
                 <Route path={'/form'} element={<Form />}/>
             </Routes>
@@ -34,3 +35,7 @@ function App() {
 }
 
 export default App;
+
+// git add .
+// git commit -m "commit name"
+// git push
