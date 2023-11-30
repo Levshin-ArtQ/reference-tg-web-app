@@ -5,7 +5,7 @@
     flex-direction: column;
 }
 .wrapper {
-    padding: 0 50px;
+    padding: 0 10px;
 }
 .client_hat {
     height: 200px;
@@ -16,7 +16,6 @@
 
 .widgets_list {
     justify-content: space-between;
-    padding: 50px;
 
 }
 .widget {
