@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { AddToCalendarButton } from 'add-to-calendar-button-react';
+function getSchedule(masterName) {
 
+ console.log('yes I need schedule')
+}
 const ReservationForm = () => {
-    
+    const [scheldule, setSchedule] = useState(getSchedule('masterName'))
+    // useEffect
+
     return (
         <div>
+        
+
         <AddToCalendarButton
             name="Title"
             options={['Apple','Google']}

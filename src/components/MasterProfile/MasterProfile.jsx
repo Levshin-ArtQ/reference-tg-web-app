@@ -23,7 +23,7 @@ const MasterProfile = (props) => {
     
         return () => clearInterval(interval);
       }, []);
-    const masterPhoto = props.masterPhoto;
+    const masterPhoto = props.masterPhoto; //TODO: also from database useEffect
     const masterName = props.masterName;
 
 

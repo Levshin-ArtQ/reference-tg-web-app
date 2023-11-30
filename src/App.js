@@ -9,6 +9,8 @@ import './variables.css';
 import SalonProfile from './components/SalonProfile/SalonProfile';
 import MasterProfile from './components/MasterProfile/MasterProfile';
 import ReservationForm from './components/ReservationForm/ReservationForm';
+import ServiceWidget from './components/ServiceWidget/ServiceWidget'
+import ClientHome from './pages/ClientHome';
 
 function App() {
     const {onToggleButton, tg} = useTelegram();
@@ -25,11 +27,11 @@ function App() {
     return (
         <div className="App">
             <Header />
-            <span>Вы выбрали {master}</span>
             <Routes>
                 <Route path={'/master'} element={<MasterProfile/>}/>
                 <Route index element={<SalonProfile><ProductList /><ReservationForm></ReservationForm></SalonProfile>}/>
                 <Route path={'/form'} element={<Form />}/>
+                <Route path={'/home'} element={<ClientHome/>}></Route>
             </Routes>
         </div>
     );

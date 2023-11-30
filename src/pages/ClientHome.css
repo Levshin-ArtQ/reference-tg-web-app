@@ -1,0 +1,24 @@
+.df, .dfc {
+    display: flex;
+}
+.dfc {
+    flex-direction: column;
+}
+.wrapper {
+    
+}
+.client_hat {
+    height: 200px;
+}
+.button_str {
+    justify-content: space-between;
+}
+
+.widgets_list {
+    justify-content: space-between;
+    padding: 50px;
+
+}
+.widget {
+    margin-bottom: 10px;
+}
