@@ -5,7 +5,7 @@
     flex-direction: column;
 }
 .wrapper {
-    
+    padding: 0 50px;
 }
 .client_hat {
     height: 200px;
