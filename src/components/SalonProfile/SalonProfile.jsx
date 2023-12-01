@@ -9,7 +9,6 @@ const SalonProfile = ({ children }) => {
     return (
         <>
             <div className='salon_wallpaper'>
-                <div className='slogan'>Влюбим тебя в свою красоту и качество с первого взгляда</div> 
             </div>
             <div className='menu_options'>
                 <Link className='booking_button button' to='/form'>Записаться</Link>
