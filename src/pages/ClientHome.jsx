@@ -45,6 +45,7 @@ const ClientHome = () => {
             
             <YMaps>
                 <div>
+                Где вы:
                 <Map defaultState={{ center: [55.160372, 61.370303], zoom: 15 }} />
                 </div>
             </YMaps>
