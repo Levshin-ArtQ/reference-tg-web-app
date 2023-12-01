@@ -5,7 +5,15 @@ import Button from '../components/Button/Button.jsx'; // TODO: wrong import see
 import './ClientHome.css'
 import ServiceWidget from '../components/ServiceWidget/ServiceWidget.jsx'
 import CooperationWidget from '../components/CooperationWidget/CooperationWidget.jsx'
+import { YMaps, Map } from '@pbe/react-yandex-maps';
+// import YandMaps from '../components/YandMaps/YandMaps.jsx';
 
+// <YMaps>
+//                 <div>
+//                 My awesome application with maps!
+//                 <Map defaultState={{ center: [55.75, 37.57], zoom: 9 }} />
+//                 </div>
+//             </YMaps>
 //TODO: to database
 const products = [
     {id: '1', title: 'Маникюр и педикюр в 4 руки', duration: 50, cost: 1500, closest: 'через 5 часов'},
@@ -34,6 +42,12 @@ const ClientHome = () => {
                     <Link className="button_catalog filter_button">Каталог</Link>
                 </div>
             </div>
+            
+            <YMaps>
+                <div>
+                <Map defaultState={{ center: [55.160372, 61.370303], zoom: 15 }} />
+                </div>
+            </YMaps>
 
             <div className="widgets_list dfc">
                 {products.map(widget => (
@@ -44,7 +58,7 @@ const ClientHome = () => {
                     />
                 ))}
             </div>
-            
+
             <CooperationWidget group_booking={group} className='group'/>
             
         </div>
