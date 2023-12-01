@@ -8,9 +8,9 @@ import CooperationWidget from '../components/CooperationWidget/CooperationWidget
 
 //TODO: to database
 const products = [
-    {id: '1', title: 'Парный маникюр', duration: 20, cost: 1000, closest: 'через 5 часов'},
+    {id: '1', title: 'Маникюр и педикюр в 4 руки', duration: 50, cost: 1500, closest: 'через 5 часов'},
     {id: '2', title: 'Стрижка женская', duration: 50, cost: 1200, closest: 'Завтра утром'},
-    {id: '3', title: 'Педикюр', duration: 20, cost: 500, closest: 'Завтра вечером'},
+    {id: '3', title: 'Педикюр', duration: 60, cost: 500, closest: 'Завтра вечером'},
     {id: '4', title: 'Брови', duration: 60, cost: '700-1220', closest: 'через час'},
 ]
 const group = {id: '4', count1: 4, count2: 3, master_type: 'Визажист', master_name: 'Ирина', address: 'Лениниа 85А', time: '20:00'};

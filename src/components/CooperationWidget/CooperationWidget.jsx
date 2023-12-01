@@ -1,5 +1,6 @@
 import React from 'react';
 import './CooperationWidget.css'
+import Button from '../Button/Button'
 
 const CooperationWidget = ({group_booking}) => {
     const booked = group_booking.count1;
@@ -8,14 +9,15 @@ const CooperationWidget = ({group_booking}) => {
     const master_name = group_booking.master_name;
     const address = group_booking.address
     const time = group_booking.time;
-
+    
     return (
         <div className='coop_widget dfc'>
-            <div className="group_header header">Групповая запись</div>
-            <div className="stat"><span className="book_count">Записалось: {booked}</span><span className="book_count">Оплатитили: {payed}</span></div>
+            <div className="group_header header1">Групповой мастер-класс</div>
+            <div className="stat dfc"><span className="book_count">Записалось: {booked}</span><span className="book_count">Оплатитили: {payed}</span></div>
             <div className="span widget_item">{master_type} {master_name} </div>
             <div className="address">будет по адресу: {address}</div>
             <span className="time">{time}</span>
+            <Button className='more_about'>Подробнее</Button>
             
         </div>
     );
