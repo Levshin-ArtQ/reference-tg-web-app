@@ -13,7 +13,7 @@ const products = [
     {id: '3', title: 'Педикюр', duration: 20, cost: 500, closest: 'Завтра вечером'},
     {id: '4', title: 'Брови', duration: 60, cost: '700-1220', closest: 'через час'},
 ]
-const group = {id: '4', count1: 4, count2: 3, master_type: 'Визажист', master_name: 'Ирина', address: 'Лениниа 85А'};
+const group = {id: '4', count1: 4, count2: 3, master_type: 'Визажист', master_name: 'Ирина', address: 'Лениниа 85А', time: '20:00'};
 const count = 3;
 const ClientHome = () => {
     return (

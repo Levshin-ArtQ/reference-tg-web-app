@@ -13,7 +13,8 @@ const CooperationWidget = ({group_booking}) => {
         <div className='coop_widget dfc'>
             <div className="group_header header">Групповая запись</div>
             <div className="stat"><span className="book_count">Записалось: {booked}</span><span className="book_count">Оплатитили: {payed}</span></div>
-            <div className="span widget_item">{master_type} {master_name} пртедет по адресу: {address}</div>
+            <div className="span widget_item">{master_type} {master_name} </div>
+            <div className="address">будет по адресу: {address}</div>
             <span className="time">{time}</span>
             
         </div>
