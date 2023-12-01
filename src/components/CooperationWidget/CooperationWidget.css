@@ -1,0 +1,10 @@
+.df, .dfc {
+    display: flex;
+}
+.dfc {
+    flex-direction: column;
+}
+.header {
+    align-self: center;
+    margin-bottom: 10px;
+}

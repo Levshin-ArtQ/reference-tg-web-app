@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Button from '../components/Button/Button.jsx'; // TODO: wrong import see
 import './ClientHome.css'
 import ServiceWidget from '../components/ServiceWidget/ServiceWidget.jsx'
+import CooperationWidget from '../components/CooperationWidget/CooperationWidget.jsx'
 
 //TODO: to database
 const products = [
@@ -12,6 +13,7 @@ const products = [
     {id: '3', title: 'Педикюр', duration: 20, cost: 500, closest: 'Завтра вечером'},
     {id: '4', title: 'Брови', duration: 60, cost: '700-1220', closest: 'через час'},
 ]
+const group = {id: '4', count1: 4, count2: 3, master_type: 'Визажист', master_name: 'Ирина', address: 'Лениниа 85А'};
 const count = 3;
 const ClientHome = () => {
     return (
@@ -25,6 +27,8 @@ const ClientHome = () => {
                 </div>
             </div>
 
+            <CooperationWidget group_booking={group} />
+
             <div className="filter_block dfc">
                 <span className="question">Какая услуга вам нужна?</span>
                 <div className="button_str df">
@@ -36,6 +40,7 @@ const ClientHome = () => {
             <div className="widgets_list dfc">
                 {products.map(widget => (
                     <ServiceWidget
+
                         object = {widget}
                         className = {"widget"}
                     />
