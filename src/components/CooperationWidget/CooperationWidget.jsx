@@ -1,7 +1,7 @@
 import React from 'react';
 import './CooperationWidget.css'
 
-const CooperationWidget = (group_booking) => {
+const CooperationWidget = ({group_booking}) => {
     const booked = group_booking.count1;
     const payed = group_booking.count2;
     const master_type = group_booking.master_type;

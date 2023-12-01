@@ -27,7 +27,7 @@ const ClientHome = () => {
                 </div>
             </div>
 
-            <CooperationWidget group_booking={group} />
+            <CooperationWidget group_booking={group} className='group'/>
 
             <div className="filter_block dfc">
                 <span className="question">Какая услуга вам нужна?</span>

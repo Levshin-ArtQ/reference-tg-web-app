@@ -21,3 +21,6 @@
 .widget {
     margin-bottom: 10px;
 }
+.group {
+    align-self: center;
+}
