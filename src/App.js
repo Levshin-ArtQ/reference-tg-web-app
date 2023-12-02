@@ -11,6 +11,7 @@ import MasterProfile from './components/MasterProfile/MasterProfile';
 import ReservationForm from './components/ReservationForm/ReservationForm';
 import ServiceWidget from './components/ServiceWidget/ServiceWidget'
 import ClientHome from './pages/ClientHome';
+import BookingTable from './components/BookingTable/BookingTable';
 
 function App() {
     const {onToggleButton, tg} = useTelegram();
@@ -32,6 +33,7 @@ function App() {
                 <Route index element={<SalonProfile><ProductList /><ReservationForm></ReservationForm></SalonProfile>}/>
                 <Route path={'/form'} element={<Form />}/>
                 <Route path={'/home'} element={<ClientHome/>}></Route>
+                <Route path={'/sandbox'} element={<BookingTable/>}></Route>
             </Routes>
         </div>
     );
