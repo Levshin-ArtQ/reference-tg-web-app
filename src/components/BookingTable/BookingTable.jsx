@@ -23,7 +23,7 @@ const seanceHours = [
 function getDate(i) {
     
     let today = new Date();
-    console.log(today.setDate(today.getDate() + 28 + parseInt(i)));
+    console.log(today.setDate(today.getDate() + parseInt(i)));
 
     const month = today.getMonth() + 1;
     const year = today.getFullYear();
@@ -36,7 +36,7 @@ function getDate(i) {
   }
 function getWeek() {
     let week = []
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 4; i++) {
         week.push(getDate(i));
     }
     return week;
