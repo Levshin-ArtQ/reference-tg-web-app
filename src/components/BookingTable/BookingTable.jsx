@@ -94,39 +94,6 @@ const BookingTable = () => {
                 ))}
             </tbody>
           </table>
-          
-          <table className="custom-table">
-            <thead>
-              <tr>
-                <th>S.no</th>
-                <th>Name</th>
-                <th>Age</th>
-                {weekData.map((item, itemIndex) =>(
-                    <th>
-                        {item.date} 
-                        {item.weekday}
-                    </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {data.map((row, rowIndex) => (
-                <tr key={row.id}>
-                  {Object.values(row).map((cell, cellIndex) => (
-                    <td
-                      key={cellIndex}
-                      onClick={() => handleClick(rowIndex, cellIndex)}
-                      className="cell"
-                      tabIndex={0}
-                      style={{background: selected.rowIndex === rowIndex && selected.cellIndex === cellIndex ? 'red' : ''}}
-                    >
-                      {cell}
-                    </td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
         </div>
       );
 };
