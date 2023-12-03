@@ -33,7 +33,7 @@ function App() {
                 <Route index element={<SalonProfile><ProductList /><ReservationForm></ReservationForm></SalonProfile>}/>
                 <Route path={'/form'} element={<Form />}/>
                 <Route path={'/home'} element={<ClientHome/>}></Route>
-                <Route path={'/sandbox'} element={<BookingTable/>}></Route>
+                <Route path={'/booking'} element={<BookingTable/>}></Route>
             </Routes>
         </div>
     );
