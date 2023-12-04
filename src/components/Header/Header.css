@@ -24,6 +24,7 @@
     height: 30px;
     border-radius: 50%;
     background: #606ca2;
+    display: flex;
     justify-content: center;
     align-content: center;
 }
