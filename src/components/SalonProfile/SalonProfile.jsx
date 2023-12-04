@@ -11,7 +11,7 @@ const SalonProfile = ({ children }) => {
             <div className='salon_wallpaper'>
             </div>
             <div className='menu_options'>
-                <Link className='booking_button button' to='/booking'>Записаться</Link>
+                <Link className='booking_button button' to='/booking'>Записаться</Link> 
                 <Button>Позвонить</Button>
                 <Button>Поделиться</Button>
             </div>

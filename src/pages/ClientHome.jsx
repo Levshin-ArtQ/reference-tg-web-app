@@ -6,6 +6,7 @@ import './ClientHome.css'
 import ServiceWidget from '../components/ServiceWidget/ServiceWidget.jsx'
 import CooperationWidget from '../components/CooperationWidget/CooperationWidget.jsx'
 import { YMaps, Map } from '@pbe/react-yandex-maps';
+import { FaMapMarkerAlt } from "react-icons/fa";
 // import YandMaps from '../components/YandMaps/YandMaps.jsx';
 
 // <YMaps>
@@ -30,25 +31,18 @@ const ClientHome = () => {
             <div className="hat dfc client_hat">
                 <span className="greeting">Доброго времени суток</span>
                 <div className="count_line df">
-                    <span className="booking_count">Предстоящих записей: {count}</span>
-                    <Link className="lookup"><div>Посмотреть</div></Link>
+                    <span className="subheading">Предстоящих записей: {count}</span>
+                    <Link className="subheading"><div>Посмотреть</div></Link>
                 </div>
             </div>
 
             <div className="filter_block dfc">
-                <span className="question">Какая услуга вам нужна?</span>
+                <span className="subheading">Какая услуга вам нужна?</span>
                 <div className="button_str df">
                     <Button className="filter_button">Маникюр</Button><Button className="filter_button">Педикюр</Button><Button className="filter_button">Стрижка</Button>
                     <Link className="button_catalog filter_button">Каталог</Link>
                 </div>
             </div>
-            
-            <YMaps>
-                <div>
-                Где вы:
-                <Map defaultState={{ center: [55.160372, 61.370303], zoom: 15 }} />
-                </div>
-            </YMaps>
 
             <div className="widgets_list dfc">
                 {products.map(widget => (
@@ -61,6 +55,13 @@ const ClientHome = () => {
             </div>
 
             <CooperationWidget group_booking={group} className='group'/>
+
+            <YMaps>
+                <div>
+                    <span className="subheading"><FaMapMarkerAlt/>Здесь скоро найдутся мастера по-близости:</span>
+                    <Map defaultState={{ center: [55.160372, 61.370303], zoom: 15 }} />
+                </div>
+            </YMaps>
             
         </div>
     );

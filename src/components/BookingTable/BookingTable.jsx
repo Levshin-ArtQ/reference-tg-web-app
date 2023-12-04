@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import './BookingTable.css'
+import './BookingTable.css';
+import { FaCaretLeft } from "react-icons/fa";
+import { FaCaretRight } from "react-icons/fa";
+import picture from '../../img/salon0.jpg'
+import Button from '../Button/Button'; 
+import { FaStar } from "react-icons/fa";
+import { FaRegClock } from "react-icons/fa";
+import { FaMoneyBillWave } from "react-icons/fa";
+
 
 function getWeekDay(date) {
     let days = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
@@ -9,6 +16,11 @@ function getWeekDay(date) {
     return days[date];
   }
 
+const reserved = [
+    {'rowIndex': 1, 'cellIndex': 1},
+    {'rowIndex': 0, 'cellIndex': 1},
+    {'rowIndex': 0, 'cellIndex': 2},
+]
 const seanceHours = [
     {id: 0, time: '9:00'},
     {id: 1, time: '10:30'},
@@ -31,7 +43,7 @@ function getDate(i) {
     const weekday = getWeekDay(today.getDay());
     console.log('date:' + date)
     console.log('weekday:' + weekday)
-    return {date, weekday}
+    return {date, weekday, month}
     // return `${month}/${date}/${year}/${weekday}`;
   }
 function getWeek() {
@@ -49,13 +61,18 @@ const data = [
     { id: 3, name: "Bob", age: 35 },
 ];
 
-const BookingTable = () => {
-    const [selected, setSelected] = useState(-1)
+const BookingTable = ({ serviceName, serviceRate, serviceDuration }) => {
+    console.log(reserved)
+    const initPoint = {'rowIndex': 1, 'cellIndex': 2}
+    const [selected, setSelected] = useState(initPoint)
+    const [selectedValue, setSelectedValue] = useState('')
     const handleClick = (rowIndex, cellIndex) => {
         const cellData =
-          seanceHours[rowIndex][Object.keys(seanceHours[rowIndex])[cellIndex]];
+          seanceHours[rowIndex][Object.keys(seanceHours[rowIndex])[cellIndex]]; //TODO: another way of parsing id time
+        const clickedTime = seanceHours[rowIndex].time
         
         setSelected({rowIndex, cellIndex});
+        setSelectedValue(clickedTime);
         console.log(
           `Cell clicked: Row ${rowIndex}, Cell ${cellIndex}, Value: ${cellData}`
         );
@@ -64,7 +81,29 @@ const BookingTable = () => {
 
       return (
         <div className="container">
-          <h3>React Js Table Cell Clickable</h3>
+          <h3>Выберите дату и время сеанса</h3>
+          <img src="" alt="" className='booking_img'/>
+          <div className="info_line df">
+            <div className="rating df">
+                <span className="num">4.5</span>
+                <FaStar className="star_icon icon"></FaStar></div>
+            <div className="duration df">
+                <FaRegClock className="duration_icon icon" />
+                <span className="duration_value">1ч 25 мин</span></div>
+            <div className="cost df">
+                <FaMoneyBillWave className="cost_icon icon" />
+                <span className="cost_value">3000 Р</span>
+            </div>
+          </div>
+          <div className="master_line df">
+            <img src="" alt="" className="master_icon icon" />
+            <span className="master_name"></span>
+            <span className="master_status"></span>
+          </div>
+          <div className="location_line df">
+            <img src="" alt="" className="location_icon" />
+            <img src="" alt="" className="location_name" />
+          </div>
           <table className="custom-table">
             <thead>
               <tr>
@@ -85,7 +124,10 @@ const BookingTable = () => {
                                 onClick={() => handleClick(rowIndex, cellIndex)}
                                 className="cell"
                                 tabIndex={0}
-                                style={{background: selected.rowIndex === rowIndex && selected.cellIndex === cellIndex ? 'red' : ''}}
+                                style={{
+                                    background: selected.rowIndex === rowIndex && selected.cellIndex === cellIndex ? '#b9424b' : '',
+                                    color: selected.rowIndex === rowIndex && selected.cellIndex === cellIndex ? '#fff' : '',
+                                }}
                             >   
                                 {row.time}
                             </td>
@@ -94,6 +136,10 @@ const BookingTable = () => {
                 ))}
             </tbody>
           </table>
+          <div className="booking_line">
+            <span className="booking_date">{selectedValue}</span>
+            <Button className="complete_button">Записаться</Button>
+          </div>
         </div>
       );
 };
