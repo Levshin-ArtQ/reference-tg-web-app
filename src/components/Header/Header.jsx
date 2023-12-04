@@ -17,7 +17,7 @@ const Header = () => {
                 <span className={'username'}>
                     {user?.username}
                 </span>
-                <div className="user_icon round_icon df">{user?.username.charAt(0)}</div>
+                <div className="user_icon round_icon df"><span style={{margin: 'auto'}}>{user?.username.charAt(0)}F</span></div>
         </div>
     );
 };
