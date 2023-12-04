@@ -12,11 +12,12 @@ const Header = () => {
 
     return (
         <div className={'header'}>
-        <Button className={'backbutton'} onClick={() => navigate(-1)}><FaAngleLeft className='backicon'/></Button>
-            
-            <span className={'username'}>
-                {user?.username}
-            </span>
+            <Button className={'backbutton'} onClick={() => navigate(-1)}><FaAngleLeft className='backicon'/></Button>
+                
+                <span className={'username'}>
+                    {user?.username}
+                </span>
+                <div className="user_icon round_icon df">{user?.username.charAt(0)}</div>
         </div>
     );
 };
