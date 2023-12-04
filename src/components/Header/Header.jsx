@@ -15,7 +15,7 @@ const Header = () => {
             <Button className={'backbutton'} onClick={() => navigate(-1)}><FaAngleLeft className='backicon'/></Button>
                 
                 <span className={'username'}>
-                    {user?.username}
+                    {user?.first_name} {user?.last_name} 
                 </span>
                 <div className="user_icon round_icon df"><span style={{margin: 'auto'}}>{user?.username.charAt(0)}</span></div>
         </div>

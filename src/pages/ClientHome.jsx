@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import {useTelegram} from "../hooks/useTelegram";
 import Button from '../components/Button/Button.jsx'; // TODO: wrong import see
 import './ClientHome.css'
 import ServiceWidget from '../components/ServiceWidget/ServiceWidget.jsx'
 import CooperationWidget from '../components/CooperationWidget/CooperationWidget.jsx'
 import { YMaps, Map } from '@pbe/react-yandex-maps';
 import { FaMapMarkerAlt } from "react-icons/fa";
+
 // import YandMaps from '../components/YandMaps/YandMaps.jsx';
 
 // <YMaps>
@@ -25,11 +27,12 @@ const products = [
 const group = {id: '4', count1: 4, count2: 3, master_type: 'Визажист', master_name: 'Ирина', address: 'Лениниа 85А', time: '20:00'};
 const count = 3;
 const ClientHome = () => {
+    const { user } = useTelegram();
     return (
         <div className='wrapper'>
 
             <div className="hat dfc client_hat">
-                <span className="greeting">Доброго времени суток</span>
+                <span className="greeting">Добрый вечер{user ? ', ' + user?.first_name : ''}</span>
                 <div className="count_line df">
                     <span className="subheading">Предстоящих записей: {count}</span>
                     <Link className="subheading"><div>Посмотреть</div></Link>
@@ -39,7 +42,9 @@ const ClientHome = () => {
             <div className="filter_block dfc">
                 <span className="subheading">Какая услуга вам нужна?</span>
                 <div className="button_str df">
-                    <Button className="filter_button">Маникюр</Button><Button className="filter_button">Педикюр</Button><Button className="filter_button">Стрижка</Button>
+                    <Button className="filter_button">Маникюр</Button>
+                    <Button className="filter_button">Педикюр</Button>
+                    <Button className="filter_button">Стрижка</Button>
                     <Link className="button_catalog filter_button">Каталог</Link>
                 </div>
             </div>

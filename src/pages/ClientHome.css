@@ -9,6 +9,11 @@
 }
 .client_hat {
     height: 200px;
+    background: #db565a;
+    opacity: 0.5;
+    padding: 20px;
+    font-size: larger;
+
 }
 .button_str {
     justify-content: space-between;
