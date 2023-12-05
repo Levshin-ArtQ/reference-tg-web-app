@@ -4,9 +4,9 @@
 .dfc {
     flex-direction: column;
 }
-.wrapper {
+/* .wrapper {
     padding: 0 20px;
-}
+} */
 .greeting {
     font-weight: bolder;
     margin-bottom: 20px;
