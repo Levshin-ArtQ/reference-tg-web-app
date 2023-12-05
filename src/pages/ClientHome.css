@@ -9,7 +9,7 @@
 }
 .greeting {
     font-weight: bolder;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     color:#fff;
 }
 .count_text {
@@ -20,12 +20,14 @@
     padding: 10px;
     align-self: center;
     font-weight: bold;
+    display: flex;
 }
 .peek-link {
     background-color: #fff;
     border-radius: 10px;
     padding: 10px;
     color: #616da3 !important;
+    margin-left: auto;
 }
 .client_hat {
     /* height: 200px; */
@@ -39,7 +41,11 @@
     margin: 20px;
 }
 .subheading {
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
+}
+Map {
+    border-radius: 20px;
+    align-self: center;
 }
 .button_str {
     justify-content: space-between;

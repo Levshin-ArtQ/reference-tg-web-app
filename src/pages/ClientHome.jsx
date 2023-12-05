@@ -6,7 +6,7 @@ import Button from '../components/Button/Button.jsx'; // TODO: wrong import see
 import './ClientHome.css'
 import ServiceWidget from '../components/ServiceWidget/ServiceWidget.jsx'
 import CooperationWidget from '../components/CooperationWidget/CooperationWidget.jsx'
-import { YMaps, Map } from '@pbe/react-yandex-maps';
+import { YMaps, Map, GeolocationControl, TrafficControl } from '@pbe/react-yandex-maps';
 import { FaMapMarkerAlt } from "react-icons/fa";
 
 // import YandMaps from '../components/YandMaps/YandMaps.jsx';
@@ -63,9 +63,14 @@ const ClientHome = () => {
             <CooperationWidget group_booking={group} className='group'/>
 
             <YMaps>
-                <div>
+                <div className='dfc'>
                     <span className="subheading"><FaMapMarkerAlt/>Здесь скоро найдутся мастера по-близости:</span>
-                    <Map defaultState={{ center: [55.160372, 61.370303], zoom: 15 }} />
+
+                    <Map defaultState={{ center: [55.160372, 61.370303], zoom: 15 }} >
+                        <GeolocationControl options={{ float: "left" }} />
+                        <TrafficControl options={{ float: "right" }} />
+                    </Map>
+                    
                 </div>
             </YMaps>
             
