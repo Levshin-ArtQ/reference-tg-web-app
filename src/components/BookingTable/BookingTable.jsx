@@ -92,7 +92,7 @@ const BookingTable = ({ serviceName, serviceRate, serviceDuration }) => {
                 <span className="duration_value">1ч 25 мин</span></div>
             <div className="cost df">
                 <FaMoneyBillWave className="cost_icon icon" />
-                <span className="cost_value">3000 Р</span>
+                <span className="cost_value">XXXX Р</span>
             </div>
           </div>
           <div className="master_line df">

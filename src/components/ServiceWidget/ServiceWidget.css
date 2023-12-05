@@ -47,6 +47,10 @@
     color: #333840;
     margin-right: 10px;
 }
+.cost {
+    margin-right: 3px;
+    font-weight: 600;
+}
 .closest {
     color: #333840;
 }

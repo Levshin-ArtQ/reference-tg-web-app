@@ -1,8 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import Popup from 'reactjs-popup';
 import { Link } from 'react-router-dom';
 import {useTelegram} from "../hooks/useTelegram";
-import Button from '../components/Button/Button.jsx'; // TODO: wrong import see
+import Button from '../components/Button/Button.jsx'; 
 import './ClientHome.css'
 import ServiceWidget from '../components/ServiceWidget/ServiceWidget.jsx'
 import CooperationWidget from '../components/CooperationWidget/CooperationWidget.jsx'
