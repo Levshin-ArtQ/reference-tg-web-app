@@ -52,6 +52,9 @@
     margin-top: 10px;
     margin-right: 70px;
 }
+.filter_button {
+    font-size: medium;
+}
 
 .widgets_list {
     justify-content: space-between;
@@ -62,7 +65,6 @@
 }
 .group {
     align-self: center;
-    margin: 20px;
 }
 .sub_map {
     align-self: center;
