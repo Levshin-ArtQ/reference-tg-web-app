@@ -6,7 +6,7 @@ import Button from '../components/Button/Button.jsx'; // TODO: wrong import see
 import './ClientHome.css'
 import ServiceWidget from '../components/ServiceWidget/ServiceWidget.jsx'
 import CooperationWidget from '../components/CooperationWidget/CooperationWidget.jsx'
-import { YMaps, Map, GeolocationControl, TrafficControl } from '@pbe/react-yandex-maps';
+import { YMaps, Map, GeolocationControl, TrafficControl, Circle } from '@pbe/react-yandex-maps';
 import { FaMapMarkerAlt } from "react-icons/fa";
 
 // import YandMaps from '../components/YandMaps/YandMaps.jsx';
@@ -64,11 +64,21 @@ const ClientHome = () => {
 
             <YMaps>
                 <div className='dfc'>
-                    <span className="subheading sub_map"><FaMapMarkerAlt/> Здесь скоро найдутся мастера по-близости:</span>
+                    <span className="subheading sub_map"><FaMapMarkerAlt/> Здесь скоро найдутся мастера поблизости:</span>
                     <div className="map_wrapper">
                         <Map defaultState={{ center: [55.160372, 61.370303], zoom: 15 }} >
                             <GeolocationControl options={{ float: "left" }} />
                             <TrafficControl options={{ float: "right" }} />
+                            <Circle
+                                geometry={[[55.160372, 61.370303], 300]}
+                                options={{
+                                    draggable: true,
+                                    fillColor: "#DB709377",
+                                    strokeColor: "#990066",
+                                    strokeOpacity: 0.8,
+                                    strokeWidth: 5,
+                                }}
+                            />
                         </Map>
                     </div>
                 </div>

@@ -67,6 +67,6 @@
     align-self: center;
 }
 .sub_map {
-    align-self: center;
-    margin: 20px 0 10px;
+    margin: auto;
+    margin-top: 20px;
 }
