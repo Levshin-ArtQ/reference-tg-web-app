@@ -5,15 +5,34 @@
     flex-direction: column;
 }
 .wrapper {
-    padding: 0 10px;
+    padding: 0 20px;
+}
+.greeting {
+    margin-bottom: auto;
+}
+.peek {
+    padding: 10px;
+    align-self: center;
+}
+.peek-link {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    color: #616da3 !important;
 }
 .client_hat {
     height: 200px;
-    background: #db565a;
-    opacity: 0.5;
+    background: #616da3;
     padding: 20px;
     font-size: larger;
-
+    margin: 20px 5px;
+    border-radius: 20px;
+}
+.filter_block {
+    margin: 20px;
+}
+.subheading {
+    margin-bottom: 10px;
 }
 .button_str {
     justify-content: space-between;

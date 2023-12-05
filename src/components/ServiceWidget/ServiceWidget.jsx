@@ -21,7 +21,7 @@ const ServiceWidget = ({object}) => {
                 <div className="time">
                     <div className="duration">{duration}мин</div>
                     <div className="closest">ближайший сеанс: <a href="/about">{closest}</a></div>
-                    <Link to='/booking' className='book_button'>Записаться</Link>
+                    <Link to='/booking' className='book_button nav-link'>Записаться</Link>
                 </div>
             </div>
         </div>

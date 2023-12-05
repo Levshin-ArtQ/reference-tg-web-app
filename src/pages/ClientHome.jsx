@@ -24,7 +24,7 @@ const products = [
     {id: '3', title: 'Педикюр', duration: 60, cost: 500, closest: 'Завтра вечером'},
     {id: '4', title: 'Брови', duration: 60, cost: '700-1220', closest: 'через час'},
 ]
-const group = {id: '4', count1: 4, count2: 3, master_type: 'Визажист', master_name: 'Ирина', address: 'Лениниа 85А', time: '20:00'};
+const group = {id: '4', count1: 4, count2: 3, master_type: 'Визажист', master_name: 'Ирина', address: 'Ленина 85А', time: '20:00'};
 const count = 3;
 const ClientHome = () => {
     const { user } = useTelegram();
@@ -32,10 +32,12 @@ const ClientHome = () => {
         <div className='wrapper'>
 
             <div className="hat dfc client_hat">
-                <span className="greeting">Добрый вечер{user ? ', ' + user?.first_name : ''}</span>
-                <div className="count_line df">
+                <span className="greeting heading">Добрый вечер{user ? ', ' + user?.first_name : ''}</span>
+                <div className="count_line dfс">
                     <span className="subheading">Предстоящих записей: {count}</span>
-                    <Link className="subheading"><div>Посмотреть</div></Link>
+                    <div className="peek">
+                        <Link className="subheading nav-link peek-link">Посмотреть</Link>
+                    </div>
                 </div>
             </div>
 
@@ -45,7 +47,6 @@ const ClientHome = () => {
                     <Button className="filter_button">Маникюр</Button>
                     <Button className="filter_button">Педикюр</Button>
                     <Button className="filter_button">Стрижка</Button>
-                    <Link className="button_catalog filter_button">Каталог</Link>
                 </div>
             </div>
 
