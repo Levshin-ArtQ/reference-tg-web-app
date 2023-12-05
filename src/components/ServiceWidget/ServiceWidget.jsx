@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './ServiceWidget.css'
 import { Link } from 'react-router-dom';
 
@@ -17,10 +16,9 @@ const ServiceWidget = ({object}) => {
                     <span className="service_title">{title}</span>
                     <span className="cost">{cost} Р</span>
                 </div>
-                
+                <div className="closest">ближайший сеанс: <a href="/about">{closest}</a></div>
                 <div className="time">
                     <div className="duration">{duration}мин</div>
-                    <div className="closest">ближайший сеанс: <a href="/about">{closest}</a></div>
                     <Link to='/booking' className='book_button nav-link'>Записаться</Link>
                 </div>
             </div>
@@ -28,6 +26,5 @@ const ServiceWidget = ({object}) => {
     );
 };
 
-ServiceWidget.propTypes = {};
 
 export default ServiceWidget;

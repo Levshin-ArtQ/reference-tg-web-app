@@ -49,6 +49,8 @@
 }
 .button_str {
     justify-content: space-between;
+    margin-top: 10px;
+    margin-right: 70px;
 }
 
 .widgets_list {
