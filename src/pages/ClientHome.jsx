@@ -34,7 +34,7 @@ const ClientHome = () => {
             <div className="hat dfc client_hat">
                 <span className="greeting heading">Добрый вечер{user ? ', ' + user?.first_name : ''}</span>
                 <div className="count_line dfс">
-                    <span className="subheading">Предстоящих записей: {count}</span>
+                    <span className="subheading count_text">Предстоящих записей: {count}</span>
                     <div className="peek">
                         <Link className="subheading nav-link peek-link">Посмотреть</Link>
                     </div>

@@ -8,7 +8,11 @@
     padding: 0 20px;
 }
 .greeting {
-    margin-bottom: auto;
+    margin-bottom: 50px;
+    color:#fff;
+}
+.count_text {
+    color: #fff
 }
 .peek {
     padding: 10px;
@@ -21,7 +25,7 @@
     color: #616da3 !important;
 }
 .client_hat {
-    height: 200px;
+    /* height: 200px; */
     background: #616da3;
     padding: 20px;
     font-size: larger;
