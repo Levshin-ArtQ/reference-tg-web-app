@@ -8,15 +8,18 @@
     padding: 0 20px;
 }
 .greeting {
+    font-weight: bolder;
     margin-bottom: 50px;
     color:#fff;
 }
 .count_text {
-    color: #fff
+    color: #fff;
+    font-weight: bold;
 }
 .peek {
     padding: 10px;
     align-self: center;
+    font-weight: bold;
 }
 .peek-link {
     background-color: #fff;
