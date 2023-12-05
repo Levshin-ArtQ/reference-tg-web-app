@@ -43,9 +43,9 @@
 .subheading {
     /* margin-bottom: 10px; */
 }
-Map {
+.map_wrapper {
     border-radius: 20px;
-    align-self: center;
+    margin: auto
 }
 .button_str {
     justify-content: space-between;
@@ -60,4 +60,9 @@ Map {
 }
 .group {
     align-self: center;
+    margin: 20px;
+}
+.sub_map {
+    align-self: center;
+    margin: 20px 0 10px;
 }

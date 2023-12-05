@@ -64,13 +64,13 @@ const ClientHome = () => {
 
             <YMaps>
                 <div className='dfc'>
-                    <span className="subheading"><FaMapMarkerAlt/>Здесь скоро найдутся мастера по-близости:</span>
-
-                    <Map defaultState={{ center: [55.160372, 61.370303], zoom: 15 }} >
-                        <GeolocationControl options={{ float: "left" }} />
-                        <TrafficControl options={{ float: "right" }} />
-                    </Map>
-                    
+                    <span className="subheading sub_map"><FaMapMarkerAlt/> Здесь скоро найдутся мастера по-близости:</span>
+                    <div className="map_wrapper">
+                        <Map defaultState={{ center: [55.160372, 61.370303], zoom: 15 }} >
+                            <GeolocationControl options={{ float: "left" }} />
+                            <TrafficControl options={{ float: "right" }} />
+                        </Map>
+                    </div>
                 </div>
             </YMaps>
             
