@@ -40,8 +40,9 @@
 .filter_block {
     margin: 20px;
 }
-.subheading {
-    /* margin-bottom: 10px; */
+.progress_container {
+    justify-content: space-between;
+    margin: 0 10px;
 }
 .map_wrapper {
     border-radius: 20px;
