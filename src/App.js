@@ -32,7 +32,8 @@ function App() {
                 <Route path={'/master'} element={<MasterProfile/>}/>
                 <Route index element={<ClientHome/>}/>
                 <Route path={'/form'} element={<Form />}/>
-                <Route path={'/home'} element={<SalonProfile><ProductList /><ReservationForm></ReservationForm></SalonProfile>}></Route>
+                <Route path={'/home'} element={<ClientHome/>}></Route>
+                <Route path={'/service'} element={<SalonProfile><ProductList /><ReservationForm></ReservationForm></SalonProfile>}></Route>
                 <Route path={'/booking'} element={<BookingTable/>}></Route>
             </Routes>
         </div>
