@@ -12,6 +12,7 @@ import ReservationForm from './components/ReservationForm/ReservationForm';
 import ServiceWidget from './components/ServiceWidget/ServiceWidget'
 import ClientHome from './pages/ClientHome';
 import BookingTable from './components/BookingTable/BookingTable';
+import Experimental from './pages/Experimental/Experimental';
 
 function App() {
     const {onToggleButton, tg} = useTelegram();
@@ -35,6 +36,7 @@ function App() {
                 <Route path={'/home'} element={<ClientHome/>}></Route>
                 <Route path={'/service'} element={<SalonProfile><ProductList /><ReservationForm></ReservationForm></SalonProfile>}></Route>
                 <Route path={'/booking'} element={<BookingTable/>}></Route>
+                <Route path={'/sandbox'} element={<Experimental/>}></Route>
             </Routes>
         </div>
     );

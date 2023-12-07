@@ -5,6 +5,7 @@ import { useTelegram } from "../../hooks/useTelegram";
 import { FaAngleLeft } from "react-icons/fa";
 import "./Header.css";
 import { useAddToHomescreenPrompt } from "src/hooks/AddToHomeScreen";
+import { Link } from "react-router-dom";
 
 // <Button onClick={onClose}>Закрыть</Button>
 const Header = () => {
@@ -51,9 +52,11 @@ const Header = () => {
       <span className={"username"}>
         {user?.first_name} {user?.last_name}
       </span>
-      <div className="user_icon round_icon df">
-        <span style={{ margin: "auto" }}>{user?.username.charAt(0)}</span>
-      </div>
+      <Link to='/sandbox'>
+        <div className="user_icon round_icon df">
+            <span style={{ margin: "auto" }}>{user?.username.charAt(0)}</span>
+        </div>
+      </Link>
     </div>
   );
 };
