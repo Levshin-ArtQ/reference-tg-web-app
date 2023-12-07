@@ -109,8 +109,7 @@ const BookingTable = ({ serviceName, serviceRate, serviceDuration }) => {
               <tr>
                 {weekData.map((item) =>(
                     <th>
-                        {item.date} 
-                        {item.weekday}
+                        {item.date} {item.weekday}
                     </th>
                 ))}
               </tr>

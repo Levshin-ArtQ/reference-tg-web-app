@@ -30,9 +30,9 @@ function App() {
             <Header />
             <Routes>
                 <Route path={'/master'} element={<MasterProfile/>}/>
-                <Route index element={<SalonProfile><ProductList /><ReservationForm></ReservationForm></SalonProfile>}/>
+                <Route index element={<ClientHome/>}/>
                 <Route path={'/form'} element={<Form />}/>
-                <Route path={'/home'} element={<ClientHome/>}></Route>
+                <Route path={'/home'} element={<SalonProfile><ProductList /><ReservationForm></ReservationForm></SalonProfile>}></Route>
                 <Route path={'/booking'} element={<BookingTable/>}></Route>
             </Routes>
         </div>

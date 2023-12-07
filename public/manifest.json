@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "PanzUp",
+  "name": "PanzUp online reservation",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,6 +18,12 @@
       "sizes": "512x512"
     }
   ],
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://reference-tg-web-app.vercel.app/manifest.json"
+    }
+ ],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
