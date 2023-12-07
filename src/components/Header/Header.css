@@ -31,3 +31,10 @@
     justify-content: center;
     align-content: center;
 }
+
+@media (display-mode: standalone), 
+       (display-mode: window-controls-overlay) { 
+        .pwa-install-button { 
+          display: none; 
+        } 
+} 

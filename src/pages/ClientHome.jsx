@@ -8,6 +8,8 @@ import ServiceWidget from '../components/ServiceWidget/ServiceWidget.jsx'
 import CooperationWidget from '../components/CooperationWidget/CooperationWidget.jsx'
 import { YMaps, Map, GeolocationControl, TrafficControl, Circle } from '@pbe/react-yandex-maps';
 import { FaMapMarkerAlt } from "react-icons/fa";
+import Pie from 'src/components/Pie.jsx'
+import ProgressBar from 'src/components/ProgressBar/ProgressBar';
 
 // import YandMaps from '../components/YandMaps/YandMaps.jsx';
 
@@ -40,7 +42,11 @@ const ClientHome = () => {
                     </div>
                 </div>
             </div>
-
+            <div className="progressContainer df">
+                <ProgressBar size={100} progress={50} indicatorColor='#4f5892' label='Красота' labelColor='#4f5892' />
+                <ProgressBar size={100} progress={70} indicatorColor='#8bbd2d' label='Зоровье' labelColor='#8bbd2d' />
+                <ProgressBar size={100} progress={30} indicatorColor='#da565a' label='Менталочка' labelColor='#da565a' />
+            </div>
             <div className="filter_block dfc">
                 <span className="subheading">Какая услуга вам нужна?</span>
                 <div className="button_str df">
