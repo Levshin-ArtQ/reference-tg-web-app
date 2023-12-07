@@ -43,7 +43,7 @@ const Header = () => {
       </Button>
 
       {!isAppInstalled ? (
-        <button onClick={promptToInstall}>Add to Home Screen</button>
+        <button className="pwa-install-button" onClick={promptToInstall}>Add to Home Screen</button>
       ) : (
         <div>PlanzUp</div>
       )}
