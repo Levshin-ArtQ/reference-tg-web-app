@@ -42,7 +42,7 @@ const ClientHome = () => {
                     </div>
                 </div>
             </div>
-            <div className="progressContainer df">
+            <div className="progressContainer dfc">
                 <ProgressBar size={100} progress={50} indicatorColor='#4f5892' label='Красота' labelColor='#4f5892' />
                 <ProgressBar size={100} progress={70} indicatorColor='#8bbd2d' label='Зоровье' labelColor='#8bbd2d' />
                 <ProgressBar size={100} progress={30} indicatorColor='#da565a' label='Менталочка' labelColor='#da565a' />
